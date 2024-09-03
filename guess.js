@@ -3,17 +3,18 @@ let prompt = require("prompt-sync")();
 let triesTaken = 0;
 console.log("Number Guessing Game!!");
 let numberChosen = prompt("Choose a number 1-20: ");
-while (numberChosen > randomNumber) {
-	console.log("Your number is too high! Choose a smaller number.");
-	numberChosen = prompt("Choose a number 1-20: ");
-	triesTaken++;
+while (numberChosen != randomNumber) {
+	if (numberChosen < randomNumber) {
+		console.log("Your number is too low! Choose a larger number.");
+		numberChosen = prompt("Choose a number 1-20: ");
+		triesTaken++;
+	} else if (numberChosen > randomNumber) {
+		console.log("Your number is too high! Choose a smaller number.");
+		numberChosen = prompt("Choose a number 1-20: ");
+		triesTaken++;
+	}
 }
-while (numberChosen < randomNumber) {
-	console.log("Your number is too low! Choose a larger number.");
-	numberChosen = prompt("Choose a number 1-20: ");
-	triesTaken++;
-}
-if (triesTaken == 0) {
+if (triesTaken === 0) {
 	console.log("You are awesome!! You got it first try!!");
 } else if (numberChosen == randomNumber) {
 	triesTaken++;
