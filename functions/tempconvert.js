@@ -1,15 +1,11 @@
-let celsius;
-let convertedFahrenheit;
 function celsiusToFahrenheit(celsius) {
-	convertedFahrenheit = (celsius * 9) / 5 + 32;
+	return (celsius * 9) / 5 + 32;
 }
-celsiusToFahrenheit(20);
+let convertedFahrenheit = celsiusToFahrenheit(20);
 console.log(`${convertedFahrenheit} degrees fahrenheit.`);
 
-let fahrenheit;
-let convertedCelsius;
-function FahrenheitToCelsius(fahrenheit) {
-	convertedCelsius = ((fahrenheit - 32) * 5) / 9;
+function fahrenheitToCelsius(fahrenheit) {
+	return ((fahrenheit - 32) * 5) / 9;
 }
-FahrenheitToCelsius(68);
+let convertedCelsius = fahrenheitToCelsius(68);
 console.log(`${convertedCelsius} degrees celsius.`);
