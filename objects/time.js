@@ -3,8 +3,8 @@ let time = {
 	minute: 30,
 	second: 45,
 	formatTime: function () {
-		console.log(`${this.hour}:${this.minute}:${this.second}`);
+		console.log(`Current time: ${this.hour}:${this.minute}:${this.second}`);
 	},
 };
 
-console.log(time.formatTime());
+time.formatTime();
